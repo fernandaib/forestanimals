@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Forest Animals</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <!--Responsive website -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--Styling CSS -->
+        <link href="css/reset.css" rel="stylesheet" type="text/css">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Belleza&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        
+        <!--Styling CSS -->        
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+                
+    </head>
+    
+    <body>
+        <nav>
+            <img src="images/logo.svg" alt="logoForestAnimals">
+        </nav>
+        <header class="hero">
+
+            
+
+            <div class="headerMask">
+                <h1>Protect <br>Them</h1>                
+            </div>
+
+            <img src="images/birdRight501.png" alt="bird" class="birdYellow">
+            <img src="images/tucan.png" alt="bird" class="tucan">
+            
+
+            <div class="plantsMask">                
+                <img src="images/rabbit640.png" alt="rabbit" class="rabbit">                            
+            </div>  
+
+            <img src="images/deer416.png" alt="deer" class="deer">        
+        </header>
+
+        <div class="butterfly">
+            <img src="images/butterfly110.png" alt="butterfly">
+        </div>
+
+        <section class="author">
+            <p>Images from Unplash, photos by: <a href="https://unsplash.com/@woeger?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Robert Woeger</a>(Deer), <a href="https://unsplash.com/@kris_ricepees?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Gary Bendig</a>(Butterfly), <a href="https://unsplash.com/photos/eqXiLNfZDc0">Zdenek Machacek</a>(Tucan), <a href="https://unsplash.com/photos/w0rUWZi7jxM">sgalagaev</a>(Bunny), <a href="https://unsplash.com/photos/cXpdNdqp7eY">SK Yeong</a>(Bird)</p>          
+        </section>
+
+        <main>
+            <h2>Forest</h2>
+
+            <p>A forest is an area of land dominated by trees. Hundreds of definitions of forest are used throughout the world, incorporating factors such as tree density, tree height, land use, legal standing, and ecological function. The United Nations' Food and Agriculture Organization (FAO) defines a forest as, "Land spanning more than 0.5 hectares with trees higher than 5 meters and a canopy cover of more than 10 percent, or trees able to reach these thresholds in situ. It does not include land that is predominantly under agricultural or urban use."Using this definition, Global Forest Resources Assessment 2020 (FRA 2020) found that forests covered 4.06 billion hectares (10.0 billion acres; 40.6 million square kilometres; 15.7 million square miles), or approximately 31 percent of the world's land area in 2020.</p>
+
+            <p>Forests are the largest terrestrial ecosystem of Earth by area, and are found around the globe. 45 percent of forest land is in the tropical latitudes. The next largest share of forests are found in subarctic climates, followed by temperate, and subtropical zones</p>
+
+            <p>Forests account for 75% of the gross primary production of the Earth's biosphere, and contain 80% of the Earth's plant biomass. Net primary production is estimated at 21.9 gigatonnes of biomass per year for tropical forests, 8.1 for temperate forests, and 2.6 for boreal forests.</p>
+
+            <p>Forests form distinctly different biomes at different latitudes and elevations, and with different precipitation and evapotranspiration rates. These biomes include boreal forests in subarctic climates, tropical moist forests and tropical dry forests around the Equator, and temperate forests at the middle latitudes. Forests form in areas of the Earth with high rainfall, while drier conditions produce a transition to savanna. However, in areas with intermediate rainfall levels, forest transitions to savanna rapidly when the percentage of land that is covered by trees drops below 40 to 45 percent. Research conducted in the Amazon rainforest shows that trees can alter rainfall rates across a region, releasing water from their leaves in anticipation of seasonal rains to trigger the wet season early. Because of this, seasonal rainfall in the Amazon begins 2 to 3 months earlier than the climate would otherwise allow. Deforestation in the Amazon and anthropogenic climate change hold the potential to interfere with this process, causing the forest to pass a threshold where it transitions into savanna.</p>
+
+            <p>Deforestation threatens many forest ecosystems. Deforestation occurs when humans remove trees from a forested area by cutting or burning, either to harvest timber or to make way for farming. Most deforestation today occurs in tropical forests. The vast majority of this deforestation is because of the production of four commodities: wood, beef, soy, and palm oil. Over the past 2,000 years, the area of land covered by forest in Europe has been reduced from 80% to 34%. Large areas of forest have also been cleared in China and in the eastern United States, in which only 0.1% of land was left undisturbed. Almost half of Earth's forest area (49 percent) is relatively intact, while 9 percent is found in fragments with little or no connectivity. Tropical rainforests and boreal coniferous forests are the least fragmented, whereas subtropical dry forests and temperate oceanic forests are among the most fragmented. Roughly 80 percent of the world's forest area is found in patches larger than 1 million hectares (2.5 million acres). The remaining 20 percent is located in more than 34 million patches around the world the vast majority less than 1,000 hectares (2,500 acres) in size.</p>
+
+            
+         
+            
+        </main>
+
+        <script>
+            window.addEventListener('scroll', function(){
+                let scrollPosition = window.scrollY;
+                let moveDistance = scrollPosition * 2;
+                document.querySelector('.deer').style.transform = "translateX(" + moveDistance + "px)";
+            })
+
+            const scrollMove= document.querySelector('.butterfly');
+            let prevScrollPos = window.scrollY;
+
+            window.addEventListener('scroll', () => {
+                const currentScrollPos = window.scrollY;
+                if(currentScrollPos > prevScrollPos) {
+                    //scroll down
+                    scrollMove.classList.remove('flip');
+                    scrollMove.style.transform = `translateY(-50%) translateX(${currentScrollPos}px)`;
+                } else {
+                    //scroll up
+                    scrollMove.classList.add('flip');
+                    scrollMove.style.transform = `scaleX(-1) translateY(-50%) translateX(${-currentScrollPos}px)`;
+                }
+                prevScrollPos = currentScrollPos;                
+            })
+            
+            // Birds Movement
+            window.addEventListener('scroll', function(){
+                let scrollPosition = window.scrollY;
+                let moveDistance = scrollPosition * 2;
+                document.querySelector('.tucan').style.transform = "translateX(" + moveDistance + "px)";
+            })
+
+            window.addEventListener('scroll', function(){
+                let scrollPosition = window.scrollY;
+                let moveDistance = scrollPosition * -2;
+                document.querySelector('.birdYellow').style.transform = "translateX(" + moveDistance + "px)";
+            })
+        </script>
+
+        <footer>
+            <p> &copy; Powered by FIB Studio</p>
+        </footer>
+        
+        
+    </body>
+
+
+</html>

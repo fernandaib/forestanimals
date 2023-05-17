@@ -1,0 +1,124 @@
+/* font-family: 'Sriracha', cursive; */
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+body{
+    font-family: 'Sriracha', cursive;
+    margin:auto;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+header.hero{
+    background-image: url('../images/landscape.png');    
+    background-position: bottom;
+    background-size: cover;    
+    min-height: 100vh;
+    position: relative;
+    
+      
+}
+
+.hero h1{
+    color: #FFF;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    text-align: center;
+    font-size: clamp(4rem, 10vw, 7rem);
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-top: 3rem;
+    width: 100%;
+    position: fixed;
+}
+
+.rabbit{
+    position: fixed;
+    width: 10%;
+    height: auto;
+    margin-top: 20rem;   
+}
+
+.headerMask{
+    position: absolute;
+    inset: 0;
+    mask: url('../images/maskInvert.png');
+    mask-position: bottom;
+    mask-size: cover;
+    -webkit-mask: url('../images/maskInvert.png');
+    -webkit-mask-position: bottom;
+    -webkit-mask-size: cover;
+}
+
+.plantsMask{   
+
+    position: absolute;
+    inset: 0;
+    mask: url('../images/maskInvertSoil.png');
+    mask-position: bottom;
+    mask-size: cover;
+    -webkit-mask: url('../images/maskInvertSoil.png');
+    -webkit-mask-position: bottom;
+    -webkit-mask-size: cover;
+
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+.birds{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.rabbit{
+    background-color: blueviolet;
+}
+/* .bird{
+    background-color: yellow;
+    width: 30%;
+} */
+.birdPink{
+    background-color: aqua;
+}
+
+.author{
+    text-align: center;
+}
+
+
+main{
+    max-width: 800px;
+    margin: 2rem auto;
+
+    line-height: 1.5;
+}
+
+/* deer */
+.f1{
+    position: absolute;
+    top: 30%;    
+    left: 0;
+    transform: translateX(-100%);
+}
+
+/* butterfly */
+.f2{
+    position: fixed;
+    left: -100px;
+    top: 30%;
+    transform: translateY(-50%) translateX(0%);
+    transition: transform 0.8s ease-out;
+}
+
+.birdYellow{
+
+    max-width: 40%;
+
+}
